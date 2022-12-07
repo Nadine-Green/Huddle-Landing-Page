@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Open+Sans&family=Outfit:wght@300;400;600&family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    box-sizing:border-box;
+}
+
+h1,h1,h3,p{
+    overflow-wrap:break-word;
+}
+
+body{
+    background-color: var(--violet);
+    padding:2rem;
+    background-image: url("images/bg-mobile.svg");
+}
+
+img{
+    width:100%;
+}
+
+main{
+
+}
+
+article{
+    display:flex;
+    flex-direction:column;
+    gap:3rem;
+    color:white;
+    max-width:600px;
+    margin: auto;
+}
+
+.logo{
+    width:150px;
+    margin-bottom:3rem;
+    transition: 0.5s ease-in-out;
+    cursor:pointer;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    line-height:1.5;
+    
+}
+
+h1{
+    font-family: "Poppins";
+}
+
+p{
+    font-family:"Open Sans";
+    margin-bottom:2rem;
+}
+
+button{
+   padding: .5rem 4rem;
+   border-radius:20px;
+   border:none;
+   color:var(--violet);
+   margin-bottom:5rem;
+   cursor:pointer;
+   box-shadow:2px 2px 3px 1px black,5px 5px 10px 10px var(--violet);
+}
+
+button:hover{
+    background-color: var(--soft-magenta);
+}
+
+.svg{
+    display:flex;
+    gap:1.5rem;
+    justify-content:center;
+}
+
+.svg img{
+    width:15px;
+    outline: 1px solid white;
+    border-radius:50%;
+    outline-offset: 5px;
+    
+}
+
+@media screen and (min-width:900px){
+    
+    body{
+        background-image: url("images/bg-desktop.svg");
+    }
+    article{
+        flex-direction:row;
+        max-width:100%;
+        animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow{
+        from{box-shadow: 0px 0px 15px 15px black;}
+        to{box-shadow: 0px 0px 15px 15px rgb(73, 8, 48);}
+    }
+
+    img{
+        width:50%;
+    }
+
+   section{
+       text-align:left; 
+       align-items:flex-start;
+       width:50%;
+    }
+    h1{
+        font-size:3rem;
+    }
+
+    p{
+        max-width:30rem;
+    }
+
+    button{
+        padding:1rem 4rem;
+        border-radius:30px;
+    }
+
+    footer{
+        display:flex;
+        justify-content:center;
+        margin-top:2rem;
+    }
+
+    .svg{
+        display:flex;
+        gap:1.5rem;
+        justify-content:flex-end;
+        margin-top:3rem;
+    }
+}
+
